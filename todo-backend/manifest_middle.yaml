@@ -1,4 +1,4 @@
 labels:
-  sample: "wasmcloud todo-backend actor"
+  sample: "wasmcloud todo-backend middle"
 actors:
   - "./target/wasm32-unknown-unknown/debug/todo_backend_s.wasm"

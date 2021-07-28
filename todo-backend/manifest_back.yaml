@@ -1,0 +1,7 @@
+labels:
+  sample: "wasmcloud todo-backend back"
+capabilities:
+  - image_ref: wasmcloud.azurecr.io/redis:0.11.2
+    link_name: default
+  - image_ref: wasmcloud.azurecr.io/logging:0.9.4
+    link_name: default
