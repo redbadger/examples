@@ -20,7 +20,7 @@ build:
 	@$(CARGO) build
 	wash claims sign $(DEBUG)/todo_backend.wasm ${CAPABILITIES} --name "todo-backend" --ver $(VERSION) --rev 0
 	TODO_ACTOR=$(shell wash claims inspect $(DEBUG)/todo_backend_s.wasm --output json | jq .module -r) \
-	wash up --watch $(DEBUG)/todo_backend_s.wasm -m manifest.yaml
+	KVCACHE_NATS_URL=0.0.0.0 wasmcloud -m manifest.yaml
 	
 .PHONY: check
 check:
